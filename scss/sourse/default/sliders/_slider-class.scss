@@ -1,0 +1,98 @@
+.slider-class {
+  position: relative;
+
+  .item {
+    @include positionElement(100%, 100%);
+    transition: ease-out 0.5s;
+    overflow: hidden;
+
+    &.active {
+      width: 100%;
+      transition-duration: 0s;
+
+      .content-item,
+      img {
+        z-index: 2;
+      }
+    }
+
+    &.active-prev {
+      width: 0%;
+
+      .content-item,
+      img {
+        z-index: 3;
+      }
+    }
+
+    img {
+      @include positionElement(100%, 100%, 0, 0, left, top, 1);
+      object-fit: cover;
+    }
+  }
+
+  &.move-right {
+    .item {
+      left: auto;
+      right: 0;
+
+      img {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+
+
+
+  .arr-prev,
+  .arr-next {
+    @include positionElement(40px, 40px, auto, 50%, left, top, 4);
+    margin: -20px 30px 0;
+    font-size: 0;
+    cursor: pointer;
+    border: 1px solid;
+    display: none;
+  }
+
+  .arr-prev {
+    left: 0;
+
+  }
+
+  .arr-next {
+    right: 0;
+
+  }
+}
+
+.slider-pagination {
+  @include positionElement(100%, auto, 20px, 150px, right, top, 3);
+  text-align: right;
+
+  span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: $whiteColor;
+    border: 1px solid $whiteColor;
+    border-radius: 100%;
+    margin: 10px 10px 10px 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: ease-out 0.25s;
+
+    &:hover,
+    &.active {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      background: none;
+    }
+
+    &.active {
+      margin-right: 70px;
+    }
+  }
+}

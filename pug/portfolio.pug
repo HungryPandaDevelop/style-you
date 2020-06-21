@@ -1,0 +1,73 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Портфолио")
+
+		// portfolio-filter
+		.portfolio-filter.js-sticky
+			.line
+			.pf-inner
+				span Фильтры
+				.ico-next.black
+				a.active(href="#") Все работы
+					sup 224
+				each value, index in {'Дизайн упаковки' : '104', 'Создание сайтов' : '51', 'Фирменный стиль' : '61', 'Фото и видео' : '28', 'Нейминг' : '15'}
+					a(href="#") 
+						= index
+						sup 
+							= value
+		// portfolio-filter
+
+		// portfolio-filter-mobile
+		.portfolio-filter-mobile.js-sticky-mobile
+			.line
+			.portfolio-open.element-btn(data-showEl="99")
+				|Фильтры
+			.portfolio-popup.element-show(data-showEl="99")
+				.close
+				a.active(href="#") Все работы
+					sup 224
+				each value, index in {'Дизайн упаковки' : '104', 'Создание сайтов' : '51', 'Фирменный стиль' : '61', 'Фото и видео' : '28', 'Нейминг' : '15'}
+					a(href="#") 
+						= index
+						sup 
+							= value
+
+		// portfolio-filter-mobile
+
+
+		// portfolio-content
+
+		.portfolio-content
+			.main-grid.pc-items-container
+				+ps-item("../images/p1.jpg","Cream Art /","Разработка нового бренда; дизайн упаковки для сливок")  
+				+ps-item("../images/p2.jpg","Bonnita /","Создание интернет - каталога для производителя меховых изделий из норки и мутона","large")  
+				+ps-item("../images/p3.jpg","Посуда Guffman /","Дизайн упаковки коллекции посуды и кухонных  аксессуаров")  
+				+ps-item("../images/p4.jpg","Услада /","Дизайн упаковки конфет и вафель")  
+				+ps-item("../images/p5.jpg","Союзснаб /","Рестайлинг логотипа группы компаний в пишевой отрасли")  
+				+ps-item("../images/p6.jpg","Продюсерский центр Леонида Агутина /","Разработка сайта для продюсерского центра Леонида Агутина")  
+				+ps-item("../images/p8.jpg","Фермерский Клуб Истра /","Дизайн серийной этикетки для мясной продукции из телятины")  
+				+ps-item("../images/p10.jpg","Scorpion’s Blade /","Создание сайта для компании по обучению телохранителей")  
+				+ps-item("../images/p11.jpg","Comet /","Дизайн упаковки для бытовой хими")  
+				+ps-item("../images/p12.jpg","Счастсливкино /","Дизайн упаковки и товарного знака вафель")  
+				+ps-item("../images/p14.jpg","Wafer Sandwich /","Разработка и дизайн упаковки для вафельных сэндвичей")  
+				+ps-item("../images/p15.jpg","Habar /","Дизайн упаковки для чайной продукции","large")  
+				+ps-item("../images/p16.jpg","Ферм Клуб /","Создание упаковки для мясных изделий")  
+				+ps-item("../images/p17.jpg","Lazzaro /","Создание упаковки для кормов") 
+			.main-grid
+				.btn-wc
+					a(href="#").btn-upload Загрузить еще
+		// portfolio-content
+		// footer
+		include default/footer.pug
+		// footer
+

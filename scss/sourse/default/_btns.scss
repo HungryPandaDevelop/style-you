@@ -1,0 +1,78 @@
+.all-links {
+  a {
+    margin-right: 30px;
+    border: 0;
+
+    &:hover {
+      color: $orangeColor;
+    }
+  }
+
+  sup {
+    margin-left: 10px;
+    font-family: "light";
+  }
+}
+
+.links-wrap {
+  a {
+    margin-right: 30px;
+    margin-bottom: 15px;
+
+    &:hover {
+      color: $orangeColor;
+      border-color: $orangeColor;
+    }
+  }
+}
+
+.link-back {
+  position: relative;
+  top: -4px;
+
+
+
+  i {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    @include bgImageEl("../images/arr-mini-prev-black.png");
+  }
+
+  &:hover {
+    color: $orangeColor;
+
+    i {
+      background-image: url("../images/arr-mini-prev-orange.png");
+    }
+  }
+
+  * {
+    vertical-align: middle;
+  }
+}
+
+.pagination-page {
+  text-align: center;
+  margin: 0 0 120px;
+
+  a {
+    padding: 0px 21px;
+    border: 0;
+
+    &:hover {
+      color: $orangeColor;
+    }
+  }
+
+  .prev,
+  .next {
+    border-bottom: 1px dashed;
+    padding: 0;
+  }
+
+
+}

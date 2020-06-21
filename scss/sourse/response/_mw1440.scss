@@ -1,0 +1,164 @@
+//$standartSize: 16px;
+
+//$middleSize: 25px;
+
+//$largeSize: 68px;
+
+//$largeSize2: 56px;
+
+$standartSize: 15px;
+
+$middleSize: 22px;
+
+$largeSize: 68px;
+
+$largeSize2: 36px;
+
+/*header*/
+.logo {
+  width: 180px;
+}
+
+header {
+  padding-top: 16px;
+}
+
+.show-list {
+  padding-bottom: 15px;
+}
+
+.portfolio-filter {
+  padding: 0px 20px 16px;
+
+  .line {
+    margin-bottom: 11px;
+  }
+}
+
+.portfolio-nav .name-arr {
+  padding: 15px 0;
+}
+
+.head-second {
+  padding-top: 65px;
+}
+
+.portfolio-nav,
+.popup-header {
+  top: 48px;
+}
+
+/*header*/
+
+/*footer*/
+
+footer .last-logo img {
+  max-width: 120px;
+}
+
+/*footer*/
+
+/*portfolio*/
+
+.portfolio-filter {
+  .ico-next {
+    margin: 0 30px 0 15px;
+  }
+
+  a {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.portfolio-img-text,
+.portfolio-head .ph-description {
+
+  grid-column: 9/span 6;
+}
+
+.ps-extra .large-topic {
+  font-size: $largeSize2;
+}
+
+.ps-item {
+
+  h3,
+  h4 {
+    font-size: $middleSize;
+  }
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  .img-content {
+    padding: 20px;
+  }
+}
+
+.links-wrap a {
+  margin-bottom: 10px;
+  font-size: $standartSize;
+}
+
+
+
+/*portfolio*/
+
+
+/*services*/
+.services-slider {
+  h2 {
+    font-size: $largeSize2;
+  }
+
+  .links-container {
+    margin-right: -30px;
+  }
+}
+
+.ds-item {
+  font-size: 14px;
+
+  img {
+    float: none;
+  }
+}
+
+/*services*/
+
+
+/*blog*/
+
+.blog-list {
+  margin: 120px 0 0;
+}
+
+.blog-about h3 {
+  font-size: $middleSize;
+}
+
+.blog-about .btn {
+  width: 100%;
+  margin: 0 0 15px;
+}
+
+.blog-about .about-rating span {
+  font-size: $largeSize2;
+}
+
+/*blog*/
+
+/*stages*/
+.stages-tabs {
+
+  a {
+    margin-right: 15px;
+  }
+}
+
+/*stages*/

@@ -1,0 +1,62 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Бриф на разработку дизайна заполнен")
+ 
+		// brief
+		.main-grid
+			.brief-hint.conforim-hint Спасибо за обращение в брендинговое агентство Style You!
+				div Вы только что заполнили Бриф на разработку дизайна упаковки и/или этикетки.
+				div Подтверждаем, что Ваше обращение нами успешно получено и наши эксперты скоро свяжутся с вами.
+			// brief
+			.confirm-info
+				h2 Информация о заказчике
+				.cf-item
+					span Контактное лицо:
+					b Евгений Медведев
+				.cf-item
+					span E-mail:
+					b evgen@medved.ru
+			.confirm-answer
+				h2 Мы очень рады нашему знакомству и выражаем свою благодарность за обращение в наше агентство.
+				h3 Мы поможем вашему бизнесу выделиться среди конкурентов.
+				.ca-container
+					.ca-item
+						b 10 лет
+						span в брендинг индустрии
+					.ca-item
+						b 500+
+						span проектов реализовано нами		
+					.ca-item
+						b 70+
+						span постоянных клиентов
+				.btn-wc
+					a.link(href="#")
+						img(src="../images/ico-download.png")
+						span Презентация нашего агентства
+		.portfolio-section
+			.main-grid
+				.additional-head
+					h2.global Последние работы
+			.main-grid.owl-portfolio.owl-carousel
+				+ps-item("../images/p1.jpg","Cream Art /","Разработка нового бренда; дизайн упаковки для сливок")  
+				+ps-item("../images/p2.jpg","Bonnita /","Создание интернет - каталога для производителя меховых изделий из норки и мутона")  
+				+ps-item("../images/p3.jpg","Посуда Guffman /","Дизайн упаковки коллекции посуды и кухонных  аксессуаров")  
+				+ps-item("../images/p4.jpg","Услада /","Дизайн упаковки конфет и вафель")  
+				+ps-item("../images/p5.jpg","Союзснаб /","Рестайлинг логотипа группы компаний в пишевой отрасли")  
+				+ps-item("../images/p6.jpg","Продюсерский центр Леонида Агутина /","Разработка сайта для продюсерского центра Леонида Агутина")  
+				+ps-item("../images/p8.jpg","Фермерский Клуб Истра /","Дизайн серийной этикетки для мясной продукции из телятины")
+
+		// footer
+		include default/footer.pug
+		// footer
+

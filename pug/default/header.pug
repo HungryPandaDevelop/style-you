@@ -1,0 +1,35 @@
+header.stick-wrap(class=classHeader)
+  .bg-header
+  .main-grid
+    .logo
+      a(href="./index.html")
+        if classHeader == "black"
+          img(src="../images/logo.png").white
+          img(src="../images/logo-black.png").black.active
+        else
+          img(src="../images/logo.png").white.active
+          img(src="../images/logo-black.png").black
+    .feedback
+      a(href="tel:+74957224044" ) +7 (495) 722 40 44 
+        
+      span //
+      a(href="tel:+74957994044" ) (495) 799 40 44
+    nav.first-nav
+      ul
+        each val,index in ["Все услуги","Портфолио","Цены"]
+          li.show-list(data-show=index)
+            span 
+              = val
+            i(class=classHeader)
+    nav.second-nav
+      ul
+       each val in ["zakaz@style-you.ru","О нас","Контакты"]
+        li
+          a(href="#") 
+            = val
+    .line
+  .hamburger(class=classHeader)
+include head-menu/header-menu-0.pug
+include head-menu/header-menu-1.pug
+include head-menu/header-menu-2.pug
+include head-menu/mobile-menu.pug

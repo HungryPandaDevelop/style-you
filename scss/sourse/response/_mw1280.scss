@@ -1,0 +1,203 @@
+//$standartSize: 16px;
+
+//$middleSize: 25px;
+
+//$largeSize: 68px;
+
+//$largeSize2: 56px;
+
+$standartSize: 14px;
+
+$middleSize: 18px;
+
+$largeSize: 48px;
+
+$largeSize2: 36px;
+
+
+
+
+/*default*/
+body,
+html {
+  font-size: $standartSize;
+}
+
+h1 {
+  font-size: $largeSize;
+}
+
+.contacts-head h2,
+.form h2,
+h2.global,
+.slider-section h2 {
+  font-size: $largeSize2;
+}
+
+.blog-about h3,
+.portfolio-head .ph-topic h3,
+.contacts-head .ch-item .link-form,
+.comments-item .comments-name,
+.ps-item h3,
+.ps-item h4,
+.form-end h3,
+.authorization-container h3,
+.ds-tabs-content h3,
+.form .link,
+.wc-bottom-topic,
+.btn-upload,
+h2,
+.popup-header h2 {
+  font-size: $middleSize;
+}
+
+/*work-corousel*/
+.owl-prev,
+.owl-next {
+  width: 40px;
+  height: 18px;
+}
+
+.wc-img {
+  height: 180px;
+}
+
+/*work-corousel*/
+/*default*/
+
+/*hedaer*/
+.head-second h1 {
+
+  // padding: 20px 0 20px;
+}
+
+header {
+  padding-top: 14px;
+}
+
+.logo {
+  width: 165px;
+  margin-top: -14px;
+}
+
+.feedback {
+  grid-column: span 5;
+  margin-top: 1px;
+  margin-right: -5px;
+}
+
+.first-nav {
+  grid-column: span 6;
+}
+
+.second-nav {
+  grid-column: span 6;
+}
+
+.head-second {
+  padding-top: 65px;
+}
+
+/*hedaer*/
+
+/*main-section*/
+
+h2,
+.links-wrap,
+.slider-info {
+  margin-bottom: 30px;
+}
+
+/*main-section*/
+
+
+/*footer*/
+footer {
+  font-size: $standartSize;
+
+  h2 {
+    font-size: $middleSize;
+  }
+
+  .last-logo img {
+    max-width: 100px;
+  }
+}
+
+.social a img {
+  width: 20px;
+  height: 20px;
+}
+
+/*footer*/
+
+
+/*form*/
+.authorization-container .social img {
+  width: 45px;
+  height: 45px;
+}
+
+/*form*/
+
+/*portfolio*/
+.portfolio-filter {
+
+
+  a {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.portfolio-content {
+  margin-top: 30px;
+}
+
+.ps-item {
+  h4 {
+    display: none;
+  }
+
+  .img-content {
+    padding: 15px;
+    font-size: $standartSize;
+  }
+}
+
+.links-wrap a {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+/*portfolio*/
+
+/*stages*/
+.ds-item {}
+
+
+
+.stages-item .st-img img {
+  margin-top: -14px;
+}
+
+/*stages*/
+
+/*brief*/
+.brief-controls {
+  grid-column: 3/span 18;
+  margin-bottom: 45px;
+}
+
+/*brief*/
+
+/*blog*/
+
+.blog-list {
+  margin: 90px 0 0;
+}
+
+/*blog*/

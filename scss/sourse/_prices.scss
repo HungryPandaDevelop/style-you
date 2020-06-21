@@ -1,0 +1,43 @@
+.prices-section {
+  margin: 0 0 45px;
+
+  .btn-wc {
+    grid-column: 3/span 12;
+    margin: 0 0 90px;
+  }
+}
+
+.price-item {
+
+  .price-topic {
+    font-family: "bold";
+    grid-column: 3/span 4;
+  }
+
+  .price-text {
+    grid-column: span 10;
+    margin-bottom: 15px;
+  }
+
+  .price-cost {
+    grid-column: span 2;
+    text-align: right;
+    font-family: "bold";
+  }
+
+  .btn-wc {
+    grid-column: 7/span 8;
+    margin: 0;
+
+    a {
+      margin-right: 40px;
+    }
+  }
+
+  .border {
+    margin: 15px 0 39px;
+    background: $blackColor;
+    height: 1px;
+    grid-column: 3/ span 16;
+  }
+}

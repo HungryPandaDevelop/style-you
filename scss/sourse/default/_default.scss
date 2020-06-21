@@ -1,0 +1,191 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-family: "regular";
+	color: $blackColor;
+	font-size: $standartSize;
+	min-width: 320px;
+	min-height: 640px;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+a {
+	color: inherit;
+	display: inline-block;
+	border-bottom: 1px dashed;
+	font-family: "medium";
+	text-decoration: none;
+
+	&:hover {
+		border-color: transparentize($blackColor, 1);
+	}
+}
+
+.ln,
+.ln li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.custom-disk {
+	li {
+		padding-left: 15px;
+		position: relative;
+
+		&:before {
+			content: "";
+			@include positionElement(4px, 4px, 0, 8px);
+			background: $blackColor;
+			border-radius: 100%;
+		}
+	}
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-cover {
+	position: relative;
+}
+
+.img-cover img {
+	@include boxSchemeImgFull();
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-family: "bold";
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	font-size: $largeSize;
+}
+
+h2 {
+	font-size: $middleSize;
+}
+
+h2.global {
+	font-size: $largeSize;
+	margin: -10px 0 50px;
+
+}
+
+.main-grid {
+	display: grid;
+	grid-template-columns: repeat(20, 1fr);
+	grid-column-gap: 20px;
+	padding: 0 20px;
+	position: relative;
+}
+
+.social {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 35px;
+
+	a {
+		display: inline-block;
+		margin: 0 5px;
+
+		img {
+			object-fit: cover;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+
+/*multy-style*/
+.head-second {
+	font-family: "medium";
+	padding-top: 88px;
+
+	a {
+		text-decoration: none;
+		border: 0;
+	}
+
+	.link-wrap {
+		grid-column: span 2;
+	}
+
+	.breadcrumbs {
+		grid-column: span 18;
+
+		a:hover {
+			color: $orangeColor;
+		}
+	}
+
+	h1 {
+		grid-column: 3/ span 18;
+		margin-left: -4px;
+		padding: 40px 0 50px;
+	}
+}
+
+.additional-head {
+	grid-column: 3/ span 18;
+
+	h2 {
+		margin: 20px 0 57px;
+		font-size: $largeSize2;
+
+		&.mini {
+			font-size: $middleSize;
+			font-family: "medium";
+		}
+	}
+}
+
+
+
+.ico-next {
+	display: inline-block;
+	width: 30px;
+	height: 10px;
+	@include bgImageEl("../images/arr-next.png");
+
+	&.black {
+		background-image: url("../images/arr-next-black.png");
+	}
+}
+
+.mobile-element {
+	display: none;
+}
+
+.mobile-br {
+	display: none;
+}
+
+/*multy-style*/

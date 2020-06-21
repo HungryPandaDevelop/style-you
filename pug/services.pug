@@ -1,0 +1,269 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Дизайн упаковки")
+
+
+		// services
+
+
+		.services-slider
+			.arrow-wrap
+				.arr-prev
+				.arr-next
+			.count-container
+				.ss-count 1
+				span /
+				.ss-all 5
+			.owl-services.owl-carousel
+				each val in ["","","",""]
+					.ss-item
+						.ss-header
+							.main-grid
+								.prev-links-container
+									a(href="#") Примеры дизайна упаковки
+								h2.global Разработка упаковки для вейпа Fogland
+								.links-container
+									b Оказанные услуги:
+									div
+										each val in ["Дизайн упаковки","Отрисовка иллюстраций","Доработка товарного знака","Авторский надзор","Адаптация на 22 SKU"]
+											a(href="#")
+												= val
+						.ss-body
+							img.ss-img(src="../images/1.jpg")
+							.main-grid
+								.ss-about
+									.ss-item-text
+										i
+										| Перед брендинговым агентством Style You была поставлена задача по созданию сайта, формирующего имидж нового бренда...
+									.info-container
+										.view-box
+											img.ico(src="../images/ico-view-white.png")
+											span 178
+										.rew-box
+											img.ico(src="../images/ico-rew-white.png")
+											span 3
+									.links
+										a(href="#") Подробнее
+								.ss-prevprevious-elements
+									em 
+										|Следующий
+										br
+										| проект:
+									.ico-next
+									div
+										h3 Cream Art /
+										div Разработка нового бренда; дизайн упаковки для сливок
+										.info-container
+											.view-box
+												img.ico(src="../images/ico-view-white.png")
+												span 178
+											.rew-box
+												img.ico(src="../images/ico-rew-white.png")
+												span 3
+						.ss-footer
+							.info-container
+								.view-box
+									img.ico(src="../images/ico-view.png")
+									span 178
+								.rew-box
+									img.ico(src="../images/ico-rew.png")
+									span 3
+							.links-container
+								b Оказанные услуги:
+								div
+									each val in ["Дизайн упаковки","Отрисовка иллюстраций","Доработка товарного знака","Авторский надзор","Адаптация на 22 SKU"]
+										a(href="#")
+											= val
+		// dev-stage
+		.dev-stage
+			.main-grid
+				.additional-head
+					h2.global Этапы разработки упаковки
+			.ds-item-all.owl-dev-stage.owl-carousel
+				.ds-item
+					img(src="../images/dev-stage-1.png")
+					.ds-info
+						h3 Этап 1 – брифинг синхронизация
+						.ds-text Сотрудники Брендингового агентства Style You обсуждают с Заказчиком образ конечного результата проекта.
+				.ds-item
+					img(src="../images/dev-stage-2.png")
+					.ds-info
+						h3 Этап 2 – концепции дизайна упаковки
+						.ds-text Работаем по техническому заданию (которым выступает бриф) и подключаем креативный ресурс.
+				.ds-item
+					img(src="../images/dev-stage-3.png")
+					.ds-info
+						h3 Этап 3 – финализация дизайна упаковки
+						.ds-text По комментариям Заказчика дорабатывается выбранная на предыдущем этапе концепция дизайна упаковки.
+				.ds-item
+					img(src="../images/dev-stage-4.png")
+					.ds-info
+						h3 Этап 4 – адаптация на ассортиментную линейку
+						.ds-text Если ваш проект предполагает дизайн упаковки для нескольких товарных единиц или товарных категорий.
+				.ds-item
+					img(src="../images/dev-stage-5.png")
+					.ds-info
+						h3 Этап 5 – верстка технической информации
+						.ds-text Результатом работ являются макеты упаковок со сверстанной актуальной технической информацией.
+				.ds-item
+					img(src="../images/dev-stage-6.png")
+					.ds-info
+						h3 Этап 6 – предпечатная подготовка
+						.ds-text На этом этапе мы осуществляем предпечатную подготовку файлов макетов дизайнов упаковки.
+			.main-grid
+				.btn-wc
+					a.btn-upload(href="#") Порядок работы подробнее
+		//dev stage	
+
+		// work carousel
+		.work-carousel-section
+			.main-grid
+				.additional-head
+					h2.global Примеры этапов разработки
+			.work-carousel.owl-carousel
+				each val in ["1","2","3","4","5","6","7","8","9"]
+					.wc-item
+						.wc-img
+							a(href="#")
+								img(src="../images/p"+val+".jpg")
+						h3 
+							a(href="#") Creamart /
+						.descriptiom Дизайн упаковки растительных сливок для профессиональной кухни
+		// work carousel
+		
+		// portfolio-section
+		.portfolio-section
+			.main-grid
+				.additional-head
+					h2.global Примеры работ
+			.main-grid.owl-portfolio.owl-carousel
+				+ps-item("../images/p1.jpg","Cream Art /","Разработка нового бренда; дизайн упаковки для сливок")  
+				+ps-item("../images/p2.jpg","Bonnita /","Создание интернет - каталога для производителя меховых изделий из норки и мутона")  
+				+ps-item("../images/p3.jpg","Посуда Guffman /","Дизайн упаковки коллекции посуды и кухонных  аксессуаров")  
+				+ps-item("../images/p4.jpg","Услада /","Дизайн упаковки конфет и вафель")  
+				+ps-item("../images/p5.jpg","Союзснаб /","Рестайлинг логотипа группы компаний в пишевой отрасли")  
+				+ps-item("../images/p6.jpg","Продюсерский центр Леонида Агутина /","Разработка сайта для продюсерского центра Леонида Агутина")  
+				+ps-item("../images/p8.jpg","Фермерский Клуб Истра /","Дизайн серийной этикетки для мясной продукции из телятины")
+			.main-grid
+				.btn-wc
+					a.btn-upload(href="#")
+						|Все работы по дизайну упаковки
+		// portfolio-section
+		
+		// prices-section
+		.prices-section
+			.main-grid
+				.additional-head
+					h2.global Стоимость дизайна упаковки
+			+price-item("Разработка концепции упаковки","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","110 т р")
+			+price-item("Разработка товарного знака","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","110 т р")
+			+price-item("Проектирование упаковки","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","от25 т р / мес.")
+			+price-item("Дизайн упаковки 1 SKU","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","от 35 т р / мес.")
+			+price-item("Вёрстка / pre-press","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","от 35 т р / мес.")
+			.main-grid
+				.btn-wc
+					a.btn-upload(href="#") Все цены
+		// prices-section
+
+		// work carousel
+		.work-carousel-section
+			.main-grid
+				.additional-head
+					h2.global Выбери свою упаковку
+			.main-grid
+				.filter-tabs
+					a.active(href="#") По материалам
+					a(href="#") По отрослям
+			.filter-sort.main-grid
+				.filter-head
+					span Сортировать
+					.ico-next.black
+				.filter-body
+					a.active(href="#") Бумажная упаковка
+					a(href="#") Стеклянная упаковка
+					a(href="#") Полимерная упаковка
+					a(href="#") Жестяная упаковка
+			// portfolio-filter-mobile
+			.portfolio-filter-mobile.js-sticky-mobile
+				.line
+				.portfolio-open.element-btn(data-showEl="99")
+					|Фильтры
+				.portfolio-popup.element-show(data-showEl="99")
+					.close
+					a.active(href="#") Бумажная упаковка
+					a(href="#") Стеклянная упаковка
+					a(href="#") Полимерная упаковка
+					a(href="#") Жестяная упаковка
+			// portfolio-filter-mobile
+			.work-carousel.owl-carousel
+				each val in ["1","2","3","4","5","6","7","8","9"]
+					.wc-item
+						.wc-img
+							a(href="#")
+								img(src="../images/p"+val+".jpg")
+						h3 
+							a(href="#") Creamart /
+						.description Дизайн упаковки растительных сливок для профессиональной кухни
+						a.link(href="#") Заказать
+			.main-grid.wc-bottom
+				.wc-bottom-topic Дизайн картонной и бумажной упаковки
+				.wc-bottom-description Бумажная упаковка – один из самых экономичных и универсальных вариантов упаковки товаров. Разработка дизайна бумажной упаковки в брендинговом агентстве Style You - это успешная коммуникация с потребителем.
+		// work carousel
+
+		include default/form/pack-form.pug
+
+		.description-section
+			.main-grid
+				.additional-head
+					h2.global Дизайн упаковки - основные правила успеха 
+			// portfolio-filter-mobile
+			.portfolio-filter-mobile.js-sticky-mobile
+				.line
+				.portfolio-open.element-btn(data-showEl="100")
+					|Фильтры
+				.portfolio-popup.element-show(data-showEl="100")
+					.close
+					a.active(href="#") Бумажная упаковка
+					a(href="#") Стеклянная упаковка
+					a(href="#") Полимерная упаковка
+					a(href="#") Жестяная упаковка
+			// portfolio-filter-mobile
+			.main-grid
+				ul.ds-tabs.ln
+					each val in ["Этапы дизайна упаковки","Дизайн упаковки","Цветовая гамма","Форма и размер","Шрифты","Композиционное построение","Печать сверстанного дизайна"]
+						li 
+							a(href="#")
+								= val
+				.ds-tabs-content
+					.dst-item
+						h3 Этапы процесса разработки дизайна упаковки
+						p Концепция упаковки, разрабатываемая брендинговым агентством Style You, является результатом комплексных разработок. Отдельные задачи, решаемые агентством в областях маркетингового анализа, потребительского поведения, конкурентного предложения и дизайнерских решений, приведут бренд к росту количественных показателей отдачи.
+						h3 Задачи, решаемые агентством в процессе разработки дизайна упаковки:
+						ul.ln
+							li • брифинг и совместное определение ключевых задач, стоящих перед брендом на определенном этапе его развития: ассортиментная матрица, география и места продаж, позиционирование и преимущества товара, ценовой сегмент и т.д.;
+							li • предпроектное изучение упаковок конкурентов по следующим параметрам: цветовой код, тип и размер упаковки, варианты фасовки, материалы, полиграфические эффекты, сложность развертки, прочность;
+							li • предпроектный анализ визуальных и вербальных коммуникаций конкурентов, отбор ключевых характеристик, привлекающих потребителя в товаре, с учетом УТП (уникального торгового предложения) товара;
+							li • формулировка рекомендаций по упаковке, дизайну, коммуникациям с точки зрения потребительского восприятия и особенностей ценового сегмента;
+							li • создание концепции дизайна упаковки (3 варианта) на примере нескольких SKU из серии (на разных фасовках) при помощи дополнительных работ: фотосессия товара / фудстайлинг / создание персонажей / отрисовка паттерна и т.д.);
+							li • презентация отчета по проведенным этапам работы, фиксация комментариев и дальнейшая финализация выбранной концепции дизайна упаковки, а также адаптация на вес, формат, форму упаковки. 
+		
+		+example-work("Примеры работ","Все работы по дизайну упаковки")
+
+
+
+	
+
+		// footer
+		include default/footer.pug
+		// footer
+

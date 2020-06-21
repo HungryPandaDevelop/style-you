@@ -1,0 +1,14 @@
+mixin head-second(name)
+  .head-second
+    .main-grid
+      .link-wrap
+        a.link-back(href="#")
+          i
+          span назад
+      .breadcrumbs
+        a(href="#") Главная
+        span /
+        span 
+          = name
+      h1 
+        = name 

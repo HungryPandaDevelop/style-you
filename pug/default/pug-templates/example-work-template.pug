@@ -1,0 +1,21 @@
+// works
+mixin example-work(name,bottomtext,mini)
+  .portfolio-section
+    .main-grid
+      .additional-head
+        h2.global(class=mini)
+          = name
+    .main-grid.owl-portfolio.owl-carousel
+      +ps-item("../images/p1.jpg","Cream Art /","Разработка нового бренда; дизайн упаковки для сливок")  
+      +ps-item("../images/p2.jpg","Bonnita /","Создание интернет - каталога для производителя меховых изделий из норки и мутона")  
+      +ps-item("../images/p3.jpg","Посуда Guffman /","Дизайн упаковки коллекции посуды и кухонных  аксессуаров")  
+      +ps-item("../images/p4.jpg","Услада /","Дизайн упаковки конфет и вафель")  
+      +ps-item("../images/p5.jpg","Союзснаб /","Рестайлинг логотипа группы компаний в пишевой отрасли")  
+      +ps-item("../images/p6.jpg","Продюсерский центр Леонида Агутина /","Разработка сайта для продюсерского центра Леонида Агутина")  
+      +ps-item("../images/p8.jpg","Фермерский Клуб Истра /","Дизайн серийной этикетки для мясной продукции из телятины")
+    if(bottomtext)
+      .main-grid
+        .btn-wc
+          a.btn-upload(href="#")
+            = bottomtext
+  // works

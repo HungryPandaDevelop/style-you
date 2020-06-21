@@ -1,0 +1,60 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Спасибо за Ваш заказ!")
+
+		.main-grid
+			.form-end
+				|Обработка заказа происходит в течении дня.
+				br
+				|В рабочее время ПН-ПТ с 9:00 до 20:00
+				br
+				|В выходные и праздничные дни подтверждение и обработка заказа может перейти на следующий день.
+				h3 Возможно, вам будет интересно:
+		.main-grid.nav-in
+			nav.nav-first
+				h2 
+					a(href="#") Брендинг
+				ul
+					each val in ["Нейминг","Персонаж","Brand Book","Креатив"]
+						li 
+							a(href="#") 
+								= val
+			nav
+				h2 
+					a(href="#") Упаковка
+				ul
+					each val in ["Разработка концепции","Дизайн"]
+						li 
+							a(href="#") 
+								= val
+			nav
+				h2 
+					a(href="#") Визуальные коммуникации
+				ul
+					each val in ["Наружная реклама","Видео"]
+						li 
+							a(href="#") 
+								= val
+			nav
+				h2 
+					a(href="#") WEB
+				ul
+					each val in ["Поддержка","Продвижение"]
+						li 
+							a(href="#") 
+								= val
+		+example-work("Процесс разработки (примеры)","Все работы по упаковке")
+
+		// footer
+		include default/footer.pug
+		// footer

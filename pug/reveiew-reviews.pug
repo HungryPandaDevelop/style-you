@@ -1,0 +1,19 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Оставить отзыв")
+
+		include default/form/reviews-form.pug
+
+		// footer
+		include default/footer.pug
+		// footer

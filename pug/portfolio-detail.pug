@@ -1,0 +1,108 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Создание сайта каталога для декоративной светотехники Neon-night")
+
+		.portfolio-nav
+			.main-grid
+				.line
+				.name-prev.name-arr
+					a(href="#") 	
+						img.img-preview(src="../images/p6.jpg")
+						span Создание сайта для PC AGUTIN
+						.arr-prev.arr
+				.control-container
+					.count 5
+					span /
+					.all 93
+				.name-next.name-arr
+					a(href="#")
+						img.img-preview(src="../images/p2.jpg")
+						.arr-next.arr
+						span  Дизайн и создание сайта Bonitta
+		
+		.portfolio-head
+			.main-grid
+				.ph-topic
+					h3 Разработка интернет каталога светотехники 1
+					.info-container
+						.view-box
+							img.ico(src="../images/ico-view.png")
+							span 178
+						.rew-box
+							img.ico(src="../images/ico-rew.png")
+							span 3
+						br.mobile-br
+						a.link(href="#") Поделиться
+						a.link(href="#") Оставить отзыв 
+
+				.ph-description 
+					p Огромный ассортимент светотехники и освещения на интернет сайте Neon-night.ru подтолкнул нас к созданию продуманной системы фильтрации товаров, с помощью которой пользователь в считанные секунды сможет найти и изучить все технические особенности требуемого светового оборудования.
+					p Перейдя в необходимую категорию на сайте, потребитель сразу видит общее количество товаров в категории и может сортировать их в соответствии со своими техническими ограничениями.
+				.ph-information
+					.phi-item
+						b Клиент:
+						a(href="#") Neon - Night 
+					.phi-item
+						b Дата завершения:
+						span 06.11.2019
+					.phi-item
+						b Оказанные услуги:
+						each val in ["Создание сайта","Дизайн сайта","Программирование"]
+							a(href="#")
+								= val
+		.main-grid
+			.portfolio-detail-img
+				img(src="../images/detail-1.jpg")
+		.main-grid
+			.portfolio-img-text
+				| В итоге нами был разработан интернет сайт каталог с интеграцией цен для ведущего Российского поставщика декоративной светотехники и светодиодного освещения. Все страницы сайта были адаптированы под мобильные устройства.
+		.comments-section
+			.main-grid
+				.additional-head
+					h2.global Комментарии
+			+comments-item("Евгений Зитович","../images/face-1.jpg","10.05.2020")
+			+comments-item("Евгений Зитович","../images/face-2.jpg","10.05.2020","answer")
+			+comments-item("Шон Маич","../images/face-3.jpg","21.06.2020","answer last")
+			+comments-item("Евгений Зитович","../images/face-1.jpg","10.05.2020","last")
+			.main-grid
+				.btn-wc
+					a(href="#").btn-upload Показать еще
+		.portfolio-section
+			.main-grid
+				.additional-head
+					h2.global Последние работы
+			.main-grid.owl-portfolio.owl-carousel
+				+ps-item("../images/p1.jpg","Cream Art /","Разработка нового бренда; дизайн упаковки для сливок")  
+				+ps-item("../images/p2.jpg","Bonnita /","Создание интернет - каталога для производителя меховых изделий из норки и мутона")  
+				+ps-item("../images/p3.jpg","Посуда Guffman /","Дизайн упаковки коллекции посуды и кухонных  аксессуаров")  
+				+ps-item("../images/p4.jpg","Услада /","Дизайн упаковки конфет и вафель")  
+				+ps-item("../images/p5.jpg","Союзснаб /","Рестайлинг логотипа группы компаний в пишевой отрасли")  
+				+ps-item("../images/p6.jpg","Продюсерский центр Леонида Агутина /","Разработка сайта для продюсерского центра Леонида Агутина")  
+				+ps-item("../images/p8.jpg","Фермерский Клуб Истра /","Дизайн серийной этикетки для мясной продукции из телятины")
+		.prices-section
+			.main-grid
+				.additional-head
+					h2.global Стоимость создания сайтов
+			+price-item("Дизайн сайта","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","110 т р")
+			+price-item("Программирование сайта","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","110 т р")
+			+price-item("Поддержка сайта","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","от25 т р / мес.")
+			+price-item("SEO продвижение сайта","Разработка и проверка по базам ФИПС вариантов наименований, свободных на охраноспособность. Предоставление на согласование 3-5 вариантов.","от 35 т р / мес.")
+			.main-grid
+				.btn-wc
+					a.btn-upload(href="#") Все цены
+					
+
+		include default/form/design-form.pug
+		// footer
+		include default/footer.pug
+		// footer

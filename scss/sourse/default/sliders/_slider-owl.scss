@@ -1,0 +1,56 @@
+.slider-owl {
+  height: 300px;
+  background: $grayColor;
+}
+
+.owl-nav {
+  @include positionElement(8.3%, 20px, 30px, -75px, right, top, 2);
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+.owl-prev,
+.owl-next {
+  @include positionElement(45px, 20px, auto, 50%);
+  margin: 0px 0px 0;
+  font-size: 0;
+  top: 0;
+}
+
+.owl-prev {
+  left: 0;
+  @include bgImageEl("../images/arr-prev-black.png");
+
+  &:hover {
+    background-image: url("../images/arr-prev-orange.png");
+  }
+}
+
+.owl-next {
+  right: 0;
+  @include bgImageEl("../images/arr-next-black.png");
+
+  &:hover {
+    background-image: url("../images/arr-next-orange.png");
+  }
+}
+
+.owl-dots {
+  @include positionElement(100%, auto, auto, 30px, left, bottom);
+
+  .owl-dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid $blackColor;
+    margin: 10px;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: $blackColor;
+    }
+  }
+}

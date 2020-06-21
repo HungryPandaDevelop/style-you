@@ -1,0 +1,28 @@
+.main-grid
+  .form
+    h2 Ваше мнение о проекте
+    .form-content
+      .row.input-3
+        input(type="text" placeholder="Ваше ФИО")
+        input(type="text" placeholder="Ваша компания")
+        input(type="text" placeholder="Email")
+      .row
+        textarea(placeholder="Текст сообщения")
+      .footer-form
+        .checkbox.konf-check
+          label 
+            input(type="checkbox")
+            span Отправляя данные вы подтверждаете свое согласие на обработку персональных данных в соответствии с Политикой конфиденциальности
+        .hint * - обязательно для заполнения
+      .btn-wc
+        .link
+          input(type="submit" value="Оставить отзыв")
+    .authorization-container
+      h3 Или авторизуйтесь:
+      .social
+        a(href="#")
+          img(src="../images/social/v-blue.svg")
+        a(href="#")
+          img(src="../images/social/f-blue.svg")
+        a(href="#")
+          img(src="../images/social/google-color.svg")

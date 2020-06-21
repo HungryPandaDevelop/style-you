@@ -1,0 +1,103 @@
+.services-slider.main-mobile-slider
+  .arrow-wrap
+    .arr-prev
+    .arr-next
+  .count-container
+    .ss-count 1
+    span /
+    .ss-all 5
+  .owl-services.owl-carousel
+    each val in ["","","",""]
+      .ss-item
+        .ss-header
+          .main-grid
+            .prev-links-container
+              a(href="#") Примеры дизайна упаковки
+            h2.global Разработка упаковки для вейпа Fogland
+            .links-container
+              b Оказанные услуги:
+              div
+                each val in ["Дизайн упаковки","Отрисовка иллюстраций","Доработка товарного знака","Авторский надзор","Адаптация на 22 SKU"]
+                  a(href="#")
+                    = val
+        .ss-body
+          img.ss-img(src="../images/1.jpg")
+          .main-grid
+            .ss-about
+              .ss-item-text
+                i
+                | Перед брендинговым агентством Style You была поставлена задача по созданию сайта, формирующего имидж нового бренда...
+              .info-container
+                .view-box
+                  img.ico(src="../images/ico-view-white.png")
+                  span 178
+                .rew-box
+                  img.ico(src="../images/ico-rew-white.png")
+                  span 3
+              .links
+                a(href="#") Подробнее
+            .ss-prevprevious-elements
+              em 
+                |Следующий
+                br
+                | проект:
+              .ico-next
+              div
+                h3 Cream Art /
+                div Разработка нового бренда; дизайн упаковки для сливок
+                .info-container
+                  .view-box
+                    img.ico(src="../images/ico-view-white.png")
+                    span 178
+                  .rew-box
+                    img.ico(src="../images/ico-rew-white.png")
+                    span 3
+        .ss-footer
+          .info-container
+            .view-box
+              img.ico(src="../images/ico-view.png")
+              span 178
+            .rew-box
+              img.ico(src="../images/ico-rew.png")
+              span 3
+          .links-container
+            b Оказанные услуги:
+            div
+              each val in ["Дизайн упаковки","Отрисовка иллюстраций","Доработка товарного знака","Авторский надзор","Адаптация на 22 SKU"]
+                a(href="#")
+                  = val
+// dev-stage
+section.slider-section.slider-class 
+  each val,index in ["","","","",""]
+    .slider-item.item
+      img(src="../images/"+index+".jpg")
+      .main-grid
+        .content-item
+          h2 Создание имиджевого сайта FOGLAND
+              = index
+          .links-wrap
+            each val in["Дизайн сайтов","Верстка сайта","Шаблонизация на Bitrix"]
+              a(href="#") 
+                = val
+          .slider-info 
+            span /
+            |Перед брендинговым агентством Style You была поставлена задача по созданию сайта, формирующего имидж нового бренда...
+            = index
+          .all-links
+            a(href="#")
+              span Все сайты
+                sup + 23
+  .slider-pagination
+  .slider-count
+    span.current 1
+    span /
+    span.all 5
+  .nav-bottom
+    a(href="#") Услуги
+    i.ico-next
+      img(src="")
+    each val in ["Визуальные коммуникации","Создание сайтов","Брендинг","Дизайн упаковки"]
+      a(href="#") 
+        = val
+  .arr-prev
+  .arr-next

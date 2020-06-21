@@ -1,0 +1,32 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Отзывы наших клиентов")
+
+		.comments-section.comments-page
+			+comments-item("Евгений Зитович","../images/face-1.jpg","10.05.2020","last","Neon - Night")
+			+comments-item("Евгений Зитович","../images/face-2.jpg","10.05.2020","last","Electrotorg")
+			+comments-item("Шон Маич","../images/face-3.jpg","21.06.2020","last","Ambassador")
+			+comments-item("Шон Маич","../images/face-3.jpg","21.06.2020","last","Comet")
+			+comments-item("Шон Маич","../images/face-3.jpg","21.06.2020","last","Чудское озеро")
+			+comments-item("Шон Маич","../images/face-3.jpg","21.06.2020","last","Фермерский клуб Истра")
+		.pagination-page
+			a.prev(href="#") < Назад
+			a.active(href="#") 1
+			a(href="#") 2
+			a(href="#") 3
+			a.next(href="#") Далее >
+    
+		// footer
+		include default/footer.pug
+		// footer
+

@@ -1,0 +1,71 @@
+.mobile-menu
+  .line
+  .feedback
+    a(href="tel:+74957224044" ) +7 (495) 722 40 44 
+    span //
+    a(href="tel:+74957994044" ) (495) 799 40 44
+  ul.mobile-nav
+    li.opening-list
+      span Все услуги
+      i
+      nav.nav-1
+        h2
+          |Брендинг
+          i
+        ul
+          each val in ["Маркетинговое исследование","Нейминг","Слоган / легенда","Логотип / товарный знак","Персонаж","Регистрация","Brand Book","Креатив"]
+            li
+              a(href="#")
+                = val
+      nav.nav-2
+        h2 
+          | Упаковка
+          i
+        ul
+          each val in ["Разработка концепции","Проектирование","Дизайн","Верстка / pre-press"]
+            li
+              a(href="#")
+                = val
+      nav.nav-3
+        h2 
+          | Визуальные коммуникации
+          i
+        ul
+          each val in ["Наружная реклама","Полиграфия","Видео","Производство"]
+            li
+              a(href="#")
+                = val
+      nav.nav-4
+        h2 
+          | WEB
+          i
+        ul
+          each val in ["Дизайн","Нейминг","Програмирование","Поддержка","Продвижение"]
+            li
+              a(href="#")
+                = val
+    li.opening-list
+      span Портфолио
+      i
+      nav 
+        each val in ["1","2","3","4"]
+          li 
+           a(href="#")
+            = val
+    li.opening-list
+      span Цены
+      i
+      nav 
+        each val in ["1","2","3","4"]
+          li 
+           a(href="#")
+            = val
+  nav.second-nav
+    ul
+      each val in ["О нас","Контакты","zakaz@style-you.ru"]
+        li
+          a(href="#") 
+            = val
+  .ask-question
+    img.ico(src="../images/ico-phone.png")
+    span Задать вопрос специалисту

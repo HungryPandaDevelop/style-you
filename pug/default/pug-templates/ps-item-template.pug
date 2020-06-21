@@ -1,0 +1,39 @@
+mixin ps-item(img,name,text,size)
+  .ps-item(class=size)
+    .img-container
+      img.img-bg(
+          src=(img)
+          )
+      .img-content
+        h4 Услуги
+        .links-wrap
+          each val in ["Создание упаковки","Дизайн упаковки","Разработка концепции","Верстка / pre-press","Разработка логотипа"]
+            a(href="#")
+              = val
+    .about-container
+      h3 
+        = name
+      p 
+        = text
+    .info-container
+      .view-box
+        img.ico(src="../images/ico-view.png")
+        span 178
+      .rew-box
+        img.ico(src="../images/ico-rew.png")
+        span 34
+mixin ps-extra(src)
+  .ps-item.ps-extra
+    .img-container  
+      video(autoplay="" loop="" muted="" playsinline="")
+        source(src=src  type="video/mp4")
+mixin ps-video(video,name,text)
+  .ps-item.ps-video
+    .img-container
+      video(loop muted playsinline src=video)
+      .play-ico
+    .about-container
+      h3 
+        = name
+      p
+        = text

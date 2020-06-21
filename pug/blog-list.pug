@@ -1,0 +1,75 @@
+doctype html
+html
+	body
+		// head
+		include default/head.pug 
+		// head
+
+		// header
+		- var classHeader = "black"
+		include default/header.pug
+		// header
+
+		+head-second("Блог")
+
+		// portfolio-filter
+		.portfolio-filter.js-sticky
+			.line
+			.pf-inner
+				span Фильтры
+				.ico-next.black
+				a.active(href="#") Все работы
+					sup 224
+				each value, index in {'Все записи' : '104', 'Популярные' : '51', 'Новые' : '61'}
+					a(href="#") 
+						= index
+						sup 
+							= value
+		// portfolio-filter
+		// portfolio-filter-mobile
+		.portfolio-filter-mobile.js-sticky-mobile
+			.line
+			.portfolio-open.element-btn(data-showEl="99")
+				|Фильтры
+			.portfolio-popup.element-show(data-showEl="99")
+				.close
+				a.active(href="#") Все работы
+					sup 224
+				each value, index in {'Дизайн упаковки' : '104', 'Создание сайтов' : '51', 'Фирменный стиль' : '61', 'Фото и видео' : '28', 'Нейминг' : '15'}
+					a(href="#") 
+						= index
+						sup 
+							= value
+
+		// portfolio-filter-mobile
+		.blog-list
+			.main-grid.partfolio-slide
+				.data 11.05.2019
+				.slide-topic
+					h2.global 
+						a(href="#") Сайт рюмочной Григория Лепса получил награду Wadline Award
+				+ps-item("../images/p9.jpg","Рюмка Водки /","Создание сайта рюмочной Г. Лепса")
+			.main-grid.partfolio-slide
+				.data 11.05.2019
+				.slide-topic
+					h2.global 
+						a(href="#") Элементы идеальной карточки товара
+				+ps-item("../images/p19.jpg","","")
+			.main-grid.partfolio-slide
+				.data 11.05.2019
+				.slide-topic
+					h2.global 
+						a(href="#") Тенденции развития визуального стиля в вебе 2019 года
+				+ps-item("../images/p13.jpg","Марина Дорошенко /","специалист отдела маркетинга")
+			.main-grid.partfolio-slide
+				.data 11.05.2019
+				.slide-topic
+					h2.global 
+						a(href="#") CJM как инструмент повышения прибыли от интернет-магазина
+				+ps-item("../images/p20.jpg","","")
+			.main-grid
+				.btn-wc
+					a(href="#").btn-upload Загрузить еще	
+		// footer
+		include default/footer.pug
+		// footer

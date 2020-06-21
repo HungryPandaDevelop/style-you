@@ -1,0 +1,31 @@
+.main-grid
+  .form
+    h2 Оставьте комментарий
+    .form-content
+      .row.input-2
+        input(type="text" placeholder="Ваше ФИО *")
+        input(type="text" placeholder="Email *")
+      .row
+        textarea(placeholder="Текст сообщения *")
+      .row
+        input(type="file")
+      .footer-form
+        .checkbox.konf-check
+          label 
+            input(type="checkbox")
+            span 
+              |Отправляя данные вы подтверждаете свое согласие на обработку персональных данных в соответствии с 
+              a(href="#") Политикой конфиденциальности
+        .hint * - обязательно для заполнения
+      .btn-wc
+        .link
+          input(type="submit" value="Опубликовать")
+    .authorization-container
+      h3 Или авторизуйтесь:
+      .social
+        a(href="#")
+          img(src="../images/social/v-blue.svg")
+        a(href="#")
+          img(src="../images/social/f-blue.svg")
+        a(href="#")
+          img(src="../images/social/google-color.svg")

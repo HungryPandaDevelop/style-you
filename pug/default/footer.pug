@@ -1,0 +1,56 @@
+footer 
+  .main-grid
+    .line
+    .logo-footer
+      img(src="../images/logo-footer.png")
+    .feedback
+      .address
+        div Москва, Кутузовский проспект, 36, стр. 23, офис 112
+        div +7 495 722 40 44, +7 495 799 40 44, zakaz@style-you.ru
+        div Режим работы: 08:30 - 18:00
+      .all-links
+        a(href="#") PDF-Презентация
+        a(href="#") Статьи - FAQ
+        a(href="#") Отзывы
+      .copyright 
+        |© Style-You.ru 2010- 2019. Все права защищены.
+    nav.nav-1
+      h2 
+        a(href="#") Брендинг
+      ul
+        each val in ["Маркетинговое исследование","Нейминг","Слоган / легенда","Логотип / товарный знак","Персонаж","Регистрация","Brand Book","Креатив"]
+          li
+            a(href="#")
+              = val
+    nav.nav-2
+      h2 
+        a(href="#") Упаковка
+      ul
+        each val in ["Разработка концепции","Проектирование","Дизайн","Верстка / pre-press"]
+          li
+            a(href="#")
+              = val
+    nav.nav-3
+      h2 
+        a(href="#") Визуальные коммуникации
+      ul
+        each val in ["Наружная реклама","Полиграфия","Видео","Производство"]
+          li
+            a(href="#")
+              = val
+    nav.nav-4
+      h2 
+        a(href="#") WEB
+      ul
+        each val in ["Дизайн","Нейминг","Програмирование","Поддержка","Продвижение"]
+          li
+            a(href="#")
+              = val
+    .social-container
+      .social
+        each val in["../images/social/v-blue.svg","../images/social/i-red.svg","../images/social/f-blue.svg","../images/social/pin-red.svg"]
+          a(href="#")
+            img(src=val)
+      .last-logo
+        img(src="../images/ABKR.png")
+      

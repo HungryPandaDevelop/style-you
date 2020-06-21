@@ -1,0 +1,171 @@
+.portfolio-section {
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+
+  .btn-wc {
+    grid-column: 3/span 12;
+    margin: 0 0 110px;
+  }
+}
+
+.section-head {
+  grid-column: 2/span 19;
+  padding: 45px 0 110px;
+
+  .link {
+    text-decoration: none;
+    font-family: "medium";
+    font-size: $middleSize;
+    border: 0;
+
+    &:hover {
+      color: $orangeColor;
+    }
+  }
+}
+
+.ps-item {
+  grid-column: span 5;
+  position: relative;
+  margin-bottom: 110px;
+
+  p {
+    margin: 0;
+  }
+
+  &.large {
+    grid-column: span 10;
+  }
+
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    background: $orangeColor;
+    color: $whiteColor;
+    margin: 0 0 15px;
+
+    &:hover {
+      .img-bg {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .img-content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    img {
+      width: 100%;
+      transition: ease-out 0.25s;
+    }
+  }
+
+  .img-content {
+    padding: 30px;
+    font-size: $standartSize;
+    @include positionElement(100%, 100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-out 0.25s;
+
+
+  }
+
+  .links-wrap {
+    font-family: "regular";
+
+    a {
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+        color: $whiteColor;
+        border-color: $whiteColor;
+      }
+    }
+  }
+
+  h3,
+  h4 {
+    margin: 0 0 15px;
+    font-size: $middleSize;
+  }
+
+
+}
+
+.info-container {
+  margin-top: 15px;
+
+  img {
+    width: 16px;
+    height: 14px;
+    object-fit: contain;
+    margin-right: 5px;
+  }
+
+  .view-box,
+  .rew-box {
+    display: inline-block;
+    margin-right: 15px;
+
+    &>* {
+      vertical-align: middle;
+    }
+  }
+
+  .link {
+    margin-right: 15px;
+    color: $blackColor;
+  }
+}
+
+.ps-video {
+  grid-column: span 10;
+
+  .img-container {
+    position: relative;
+    padding-bottom: 58%;
+  }
+
+  .play-ico {
+    @include positionElement(180px, 180px, 50%, 50%);
+    transform: translateX(-50%) translateY(-50%);
+    @include bgImageEl("../images/video-ico.png");
+    cursor: pointer;
+  }
+
+  video {
+    @include positionElement(100%, 100%);
+    object-fit: cover;
+  }
+}
+
+.ps-extra {
+
+  .img-container {
+    padding-bottom: 100%;
+  }
+
+  video {
+    @include positionElement(100%, 100%);
+    object-fit: cover;
+  }
+
+}
+
+.partfolio-slide {
+  .data {
+    grid-column: span 2;
+  }
+
+  .slide-topic {
+    grid-column: span 13;
+
+    h2 {}
+  }
+}

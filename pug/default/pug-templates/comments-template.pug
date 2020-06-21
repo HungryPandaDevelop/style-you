@@ -1,0 +1,30 @@
+mixin comments-item(name,img,data,type,subname)
+  .comments-item(class=type)
+    .main-grid
+      .comments-img
+        img(src=img)
+      .comments-name 
+        = name
+        if(subname)
+          .comments-subname
+            | Отзыв о: 
+            a(href="#") 
+              = subname
+              img(src="../images/detail-1.jpg")
+      .comments-data.mobile-element
+        = data
+      .comments-text Этот совместный творческий процесс - непростой, но с профессионалами студии STYLE-YOU он стал интересным и позитивным. Мы просто стали одной командой. Предметная фотосъемка, дизайн и производство рекламной продукции и многое другое мы заказываем только в STYLE-YOU, так как уверенны в их профессионализме и надежности.
+      .comments-data.desktop-element
+        = data
+      a(href="#").comments-link Ответить
+      .like-counter
+        .like
+          i +
+          span 6
+        .dislike
+          i -
+          span 3
+      if type == "answer last"
+        .comments-border
+      else if type == "last"
+        .comments-border

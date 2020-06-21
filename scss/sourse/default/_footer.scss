@@ -1,0 +1,67 @@
+footer {
+  position: relative;
+  padding: 0 0px 20px;
+
+  .line {
+    background: $blackColor;
+    left: 0;
+    width: 100%;
+    margin: 0 0 28px;
+  }
+
+  a {
+    border: 0;
+
+    &:hover {
+      color: $orangeColor;
+    }
+  }
+
+  .logo-footer {
+    grid-column: span 1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .feedback {
+    grid-column: span 5;
+    font-family: "medium";
+  }
+
+  .address,
+  .all-links {
+    margin-bottom: 30px;
+  }
+
+  nav {
+    grid-column: span 3;
+  }
+
+  .nav-4 {
+    grid-column: span 2;
+  }
+
+  .social-container {
+    grid-column: span 3;
+    text-align: right;
+  }
+
+  nav {
+    h2 {
+      margin: 0 0 8px;
+      font-family: "medium";
+    }
+
+    li {
+      display: block;
+    }
+  }
+
+  .last-logo {
+    img {
+      max-width: 160px;
+    }
+  }
+}

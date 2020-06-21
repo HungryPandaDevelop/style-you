@@ -1,0 +1,129 @@
+.comments-page {
+  margin-top: 75px;
+}
+
+.comments-section {
+  .btn-wc {
+    grid-column: 2/ span 12;
+    margin: 0 0 90px;
+  }
+}
+
+.comments-item {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+
+  .comments-border {
+    grid-column: 2/ span 18;
+    margin-top: 30px;
+    height: 1px;
+    background: $blackColor;
+  }
+
+  .comments-img {
+    grid-column: 3/ span 1;
+
+    img {
+      width: 70px;
+      height: 70px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 100%;
+      margin-top: -20px;
+    }
+  }
+
+  .comments-name {
+    grid-column: span 3;
+    font-family: "bold";
+    font-size: $middleSize;
+  }
+
+  .comments-subname {
+    font-family: "regular";
+    font-size: $standartSize;
+    position: relative;
+
+    img {
+      @include positionElement(100%, auto, 0, 100%);
+      margin-top: 10px;
+      margin-left: -30px;
+      display: none;
+      padding-top: 30px;
+    }
+
+    a {
+      font-family: inherit;
+      color: $orangeColor;
+
+      &:hover {
+        img {
+          display: block;
+
+        }
+      }
+    }
+
+
+  }
+
+  .comments-text {
+    grid-column: span 9;
+    margin: 0 0 15px;
+  }
+
+  .comments-data {
+    grid-column: span 3;
+    text-align: right;
+  }
+
+  .comments-link {
+    grid-column: 7;
+    font-family: "medium";
+    text-decoration: none;
+  }
+
+  .like-counter {
+    grid-column: 13/ span 3;
+    font-family: "medium";
+    text-align: right;
+
+    i {
+      display: inline-block;
+      font-style: normal;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .like {
+      color: $orangeColor;
+    }
+
+    .like,
+    .dislike {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &.answer {
+    .comments-img {
+      grid-column: 4/span 1;
+      text-align: right;
+
+      img {
+        width: 44px;
+        height: 44px;
+        margin-top: -12px;
+      }
+    }
+
+    .comments-name {
+      grid-column: span 2;
+      font-size: $standartSize;
+    }
+  }
+
+
+}
